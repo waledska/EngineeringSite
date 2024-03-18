@@ -1,0 +1,41 @@
+﻿@page
+@model WebApplication2.Areas.Identity.Pages.Account.LogoutModel
+
+@{
+    Layout = "/Areas/Identity/Pages/_IdnetityLayout.cshtml";
+}
+
+
+
+<div class="container">
+
+    <section class="section error-404 min-vh-100 d-flex flex-column align-items-center justify-content-center">
+        <h1>403</h1>
+        <h2>صلاحياتك كمستخدم لا تسمح لك بالوصول الي لوحة الادارة.</h2>
+        <a class="btn" href="/Home/Index">الرجوع للصفحة الرئيسية</a>
+        @* <a class="btn" style="margin-top: 15px;" href="index.html">تسجيل الخروج</a> *@
+
+        @{
+            if (User.Identity?.IsAuthenticated ?? false)
+            {
+                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="/Home/Index" method="post">
+                    <button style="margin-top: 15px" type="submit" class="btn-light">تسجيل الخروج</button>
+                </form>
+            }
+            else
+            {
+                <p>You have successfully logged out of the application.</p>
+            }
+        }
+
+        <img src="~/ControllPanel/assets/img/not-found.svg" class="img-fluid py-5" alt="Page Not Found">
+        <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+    </section>
+
+</div>

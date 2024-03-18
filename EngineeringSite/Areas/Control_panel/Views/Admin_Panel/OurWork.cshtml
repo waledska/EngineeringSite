@@ -1,0 +1,39 @@
+﻿@* heading *@
+@using EngineeringSite.Models;
+@model List<jobsFinished>
+
+<h2>اعمالنا السابقه...</h2>
+<div class="d-flex justify-content-center">
+    <a class="btn btn-outline-secondary m-2" href="Add_project">اضافة مشروع جديد</a>
+</div>
+
+
+
+
+
+
+<table class="table table-hover">
+    <thead>
+        <tr class="row-cols-3 table-warning">
+            <th class="col-3" scope="col">اسم المشروع</th>
+            <th class="col-3" scope="col"> الموقع</th>
+            <th class="col-3" scope="col">الخدمة</th>
+            <th style="text-align: center;" class="col-3" scope="col">المزيد</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {   
+        <tr>
+            <td>@item.jobName</td>
+            <td>@item.location</td>
+            <td>@item.service.serviceName</td>
+            <td class="d-flex justify-content-center" style="text-align: center;">
+                    <a class="btn btn-primary btn-sm m-1" href="JobFinished_details/@item.id">التفاصيل</a>
+                    <a class="btn btn-success btn-sm m-1" href="JobFinished_modify/@item.id">تعديل</a>
+                    <a class="btn btn-danger btn-sm m-1" href="@Url.Action("delete_JobFinished", "Admin_Panel", new{ id = item.id, area ="Control_panel"})">حذف</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

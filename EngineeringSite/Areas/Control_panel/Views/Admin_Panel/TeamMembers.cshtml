@@ -1,0 +1,37 @@
+﻿@* heading *@
+@using EngineeringSite.Models;
+@model List<TeamMember>
+
+<h2>فريقنا...</h2>
+<div class="d-flex justify-content-center">
+    <a class="btn btn-outline-secondary m-2" href="Add_member">اضافة عضو جديد</a>
+</div>
+
+
+
+
+
+
+<table class="table table-hover">
+    <thead>
+        <tr class="row-cols-4 table-warning">
+            <th class="col-4" scope="col">الأسم</th>
+            <th class="col-4" scope="col"> الوظيفة</th>
+            <th style="text-align: center;" class="col-4" scope="col">المزيد</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.name</td>
+            <td>@item.job</td>
+            <td class="d-flex justify-content-center" style="text-align: center;">
+                <a class="btn btn-primary btn-sm m-1" href="TeamMembers_details/@item.id">التفاصيل</a>
+                    <a class="btn btn-success btn-sm m-1" href="TeamMembers_modify/@item.id">تعديل</a>
+                    <a class="btn btn-danger btn-sm m-1" href="@Url.Action("delete_TeamMembers", "Admin_Panel", new{ id = item.id, area ="Control_panel" })">حذف</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

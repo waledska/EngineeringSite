@@ -1,0 +1,262 @@
+﻿@using EngineeringSite.Models
+@model List<review>
+
+@* Hello *@
+<section id="about" class="about section">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="row">
+            <div class="col-lg-6 order-1 order-lg-2 aos-init aos-animate" data-aos="fade-left" data-aos-delay="100">
+                <img src="~/assets/img/about.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
+                <h3>مرحبًا بك في موقعنا للمنشآت الهندسية!</h3>
+                <p class="" style="line-height: 1.8;">
+                    نحن فريق متخصص من المهندسين القائمين على تقديم خدمات هندسية متميزة في مجالات متعددة، بما في ذلك الهندسة المعمارية، وهندسة الديكور، والهندسة المدنية. نحن نعتبر التصميم والإبداع جزءًا أساسيًا من هويتنا، ونسعى جاهدين لتقديم حلول هندسية مبتكرة تلبي احتياجاتك بشكل مثالي.
+                </p>
+                @* <hr/> *@
+                <ul>
+                    <li><i class="ri-check-double-line"></i> <span class="subtle-heading" style="font-weight: bold;">تصاميم مبتكرة:</span><br /> نقدم تصاميم هندسية تجمع بين الجمال والوظيفة. دعنا نحول أفكارك إلى واقع ملموس يستمد إلهامه من الإبداع والابتكار.</li>
+                    <br />
+                    <li><i class="ri-check-double-line"></i> <span class="subtle-heading" style="font-weight: bold;">حلول مخصصة:</span><br /> سواء كنت تبحث عن تصميم داخلي فريد أو هندسة معمارية مبتكرة، فإن فريقنا يقدم لك حلولًا مخصصة تناسب رؤيتك وتحقق أهدافك.</li>
+                    <br />
+                    <li><i class="ri-check-double-line"></i> <span class="subtle-heading" style="font-weight: bold;">تجربة مميزة:</span><br /> نحن نهتم بكل تفاصيل مشروعك، لنقدم لك تجربة هندسية استثنائية. اخترنا لتحويل فكرتك إلى واقع يفوق توقعاتك.</li>
+                    <br />
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+@* Some Lines *@
+<section id="features" class="features">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+        <div class="row">
+            <div class="image col-lg-6 aos-init aos-animate" style="background-image: url(&quot;../assets/img/features.jpg&quot;);" data-aos="fade-right"></div>
+            <div class="col-lg-6 aos-init aos-animate" data-aos="fade-left" data-aos-delay="100">
+                <!-- الهندسة المعمارية -->
+                <div class="icon-box mt-5 mt-lg-0 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="150">
+                    <i class="fa-solid fa-pencil"></i>
+                    <h4>الهندسة المعمارية</h4>
+                    <p>
+                        نحن نتخذ خطوة أولى مع مهندسينا المعماريين المبدعين، حيث يتم رسم خطط جذابة تجمع بين الجمال والوظيفة.
+                        نحن نركز على تحقيق تصاميم رائعة تجعل المبنى لوحة فنية تعبر عن أهمية المكان وراحة السكان.
+                    </p>
+                </div>
+                <!-- الهندسة المدنية -->
+                <div class="icon-box mt-5 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="150">
+                    <i class="fa-regular fa-building"></i>
+                    <h4>الهندسة المدنية</h4>
+                    <p>
+                        نمضي في الرحلة مع مهندسي الهندسة المدنية، حيث يتم وضع أسس قوية تحمل أحلامنا المعمارية.
+                        نحن نخطط بعناية لضمان الاستدامة والأمان، مما يسهم في بناء بنية تحتية قوية تدعم المبنى.
+                    </p>
+                </div>
+                <!-- الهندسة الكهربائية والميكانيكية -->
+                <div class="icon-box mt-5 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="150">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h4>الهندسة الكهربائية والميكانيكية</h4>
+                    <p>
+                        يأتي دور مهندسي الهندسة الكهربائية والميكانيكية، حيث يضيفون الحيوية والوظائف المتقدمة.
+                        نحن نركز على توفير أنظمة كهربائية وميكانيكية متطورة، تجعل المبنى مريحًا ومتجدد الطاقة.
+                    </p>
+                </div>
+                <!-- هندسة الديكور -->
+                <div class="icon-box mt-5 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="150">
+                    <i class="fa-solid fa-paint-roller"></i>
+                    <h4>هندسة الديكور</h4>
+                    <p>
+                        لا ننسى دور مهندسي الديكور، حيث يضفون لمساتهم الخاصة لجعل المكان ساحرًا.
+                        نحن نهتم بتفاصيل الألوان والمواد والتصميمات الداخلية لخلق بيئة جذابة وفريدة تلبي ذوق العملاء.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@* Quote *@
+<section id="cta" class="cta">
+    <div class="container aos-init aos-animate" data-aos="zoom-in">
+
+        <div class="text-center">
+            <p>"كل حجر يُرصّ في بناء هو نبضة من الأمل، وكل لون يندمج في تصميم هو لمسة من التفاؤل، <br /><br />ففي عالم الهندسة والديكور، نصنع بنيانًا لمستقبل مشرق يعكس أحلامنا ويضيء دروب الأمل."</p>
+            <a class="cta-btn" href="/Home/ContactUs">اترك لنا رساله!</a>
+        </div>
+
+    </div>
+</section>
+
+@* Numbers *@
+<section id="counts" class="counts">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+        <div class="row no-gutters">
+            <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
+                <!-- اضف هنا صورة تعبر عن نشاطات الشركة -->
+            </div>
+            <div class="col-xl-7 ps-4 ps-lg-5 pe-4 pe-lg-1 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-left" data-aos-delay="100">
+                <div class="content d-flex flex-column justify-content-center" style="margin-right: 30px;">
+                    <h3>بعض الارقام الواقعيه!</h3>
+                    <p>
+                        هذه الارقام توضح مدي خبرتنا بسوق العمل لكي تصنع بيننا وبينك نوع من الثقه
+                    </p>
+                    <div class="row" style="display:flex;">
+                        <div class="col-md-6 d-md-flex align-items-md-stretch">
+                            <div class="count-box">
+                                <i class="bi bi-emoji-smile"></i>
+                                <div>
+                                    <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="0" class="purecounter">150</span>
+                                    <p><strong>عميل سعيد</strong> راضٍ عن تصاميمنا وحلولنا الابتكارية.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 d-md-flex align-items-md-stretch">
+                            <div class="count-box">
+                                <i class="bi bi-journal-richtext"></i>
+                                <div>
+                                    <span data-purecounter-start="0" data-purecounter-end="120" data-purecounter-duration="0" class="purecounter">120</span>
+                                    <p><strong>مشروع</strong> تم الانتهاء منه بنجاح، مما يظهر خبرتنا.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 d-md-flex align-items-md-stretch">
+                            <div class="count-box">
+                                <i class="bi bi-clock"></i>
+                                <div>
+                                    <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="0" class="purecounter">25</span>
+                                    <p><strong>سنوات من الخبرة</strong> في تقديم حلول استثنائية.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 d-md-flex align-items-md-stretch">
+                            <div class="count-box">
+                                <i class="bi bi-award"></i>
+                                <div>
+                                    <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="0" class="purecounter">30</span>
+                                    <p><strong>جوائز</strong> تمنح تقديرًا لالتزامنا بالتميز.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End .content-->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+@* new comments section work by dynamic data *@
+<section id="testimonials" class="testimonials">
+    <div class="container aos-init aos-animate" data-aos="zoom-in">
+        <div class="testimonials-slider swiper swiper-initialized swiper-horizontal swiper-pointer-events aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper" id="swiper-wrapper-eadb397ab2e510c10f" aria-live="off">
+                @foreach (var review in Model)
+                {
+                    <div class="swiper-slide" role="group" aria-label="@review.id / @Model.Count">
+                        <div class="testimonial-item">
+                            <h3>@review.name</h3>
+                            <h4>@review.job</h4>
+                            <p>
+                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                @review.comment
+                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                            </p>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"></div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact section">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>التقييمات</h2>
+            <p>اترك لنا تقييمك لنعرضه مستقبلا للعملاء!</p>
+        </div>
+        <div class="row mt-5" style="justify-content: center;">
+
+            <div class="col-lg-8 mt-5 mt-lg-0">
+
+                <form class="form-forSaving" action="/Home/SaveReview" method="post">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="اسمك" required="" data-val="true" data-val-required="Name is required." value="">
+                            <div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div>
+                        </div>
+                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <input type="text" class="form-control" name="job" id="job" placeholder="وظيفتك" required="" data-val="true"  data-val-required="job is required." value="">
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <textarea class="form-control" name="comment" rows="5" placeholder="تقييمك" required="" data-val="comment" data-val-maxlength="Max size for the message only 500 char!" data-val-maxlength-max="500" data-val-required="Message content is required." id="Message" maxlength="500"></textarea>
+                    </div>
+                    <div class="text-center"><button type="submit">ارسال التقييم</button></div>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+@* Comments *@
+@* <section id="testimonials" class="testimonials">
+    <div class="container aos-init aos-animate" data-aos="zoom-in">
+        <div class="testimonials-slider swiper swiper-initialized swiper-horizontal swiper-pointer-events aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper" id="swiper-wrapper-eadb397ab2e510c10f" aria-live="off" style="transform: translate3d(-5616px, 0px, 0px); transition-duration: 600ms;">
+
+                <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="0" role="group" aria-label="1 / 5">
+                    <div class="testimonial-item">
+                        <h3>أحمد عبدالله</h3>
+                        <h4>مدير المشروع</h4>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            خدمات رائعة وجودة عالية. لقد ساعدونا في تحقيق أفضل نتائج ممكنة في مشروعنا المعماري. شكراً لفريق العمل المميز!
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="1" role="group" aria-label="2 / 5">
+                    <div class="testimonial-item">
+                        <h3>نورهان مصطفى</h3>
+                        <h4>مصممة داخلية</h4>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            فريق مبدع ومحترف. تمكنوا من تحويل أفكاري إلى واقع ملموس من خلال تصميم داخلي رائع. أنا سعيدة جداً بالنتيجة.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="2" role="group" aria-label="3 / 5">
+                    <div class="testimonial-item">
+                        <h3>أمين محمود</h3>
+                        <h4>صاحب متجر</h4>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            خدمة استثنائية وأفكار إبداعية. تمكنوا من تصميم مساحة متجري بطريقة تلبي احتياجاتي وتجذب الزبائن. تعامل ممتاز!
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+                </div><!-- End testimonial item -->
+                <!-- يمكنك إضافة مزيد من التعليقات هنا -->
+
+            </div>
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 2" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span></div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+    </div>
+</section> *@
+

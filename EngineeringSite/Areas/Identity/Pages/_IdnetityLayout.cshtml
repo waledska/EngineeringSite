@@ -1,0 +1,75 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>El Mashrek Login</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="~/assets/img/engineer/logoIcon.png" rel="icon">
+    <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- arabic Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@200;300;400;500;600;700;800;900&family=Cairo:wght@200;300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    @* Icons *@
+    <link href="~/assets/css/all.min.css" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/ControllPanel/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/ControllPanel/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/ControllPanel/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/ControllPanel/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="~/ControllPanel/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="~/ControllPanel/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/ControllPanel/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/ControllPanel/assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: Gp
+    * Updated: Jul 27 2023 with Bootstrap v5.3.1
+    * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+
+    @RenderBody();
+
+    <!-- Vendor JS Files -->
+    <script src="~/ControllPanel/assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="~/ControllPanel/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/ControllPanel/assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="~/ControllPanel/assets/vendor/echarts/echarts.min.js"></script>
+    <script src="~/ControllPanel/assets/vendor/quill/quill.min.js"></script>
+    <script src="~/ControllPanel/assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="~/ControllPanel/assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="~/ControllPanel/assets/vendor/php-email-form/validate.js"></script>
+
+    @* for identity => register and login  *@
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js2/site.js" asp-append-version="true"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/ControllPanel/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

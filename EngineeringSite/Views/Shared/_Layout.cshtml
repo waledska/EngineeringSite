@@ -1,0 +1,233 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>El Mashrek</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+
+    <!-- Favicons -->
+    <link href="~/assets/img/engineer/logoIcon.png" rel="icon">
+    <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- arabic Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@200;300;400;500;600;700;800;900&family=Cairo:wght@200;300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    @* Icons *@
+    <link href="~/assets/css/all.min.css" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: Gp
+    * Updated: Jul 27 2023 with Bootstrap v5.3.1
+    * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center justify-content-lg-between">
+
+            <h1 class="logo me-auto me-lg-0"><a href="/Home/Index"><img src="~/assets/img/engineer/logo1.png" style="max-width:60px;max-height:60px;margin-top;"></img></a></h1>
+
+
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="~/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="" href="/Home/Index">الصفحة الرئيسية</a></li>
+                    <li><a class="" href="/Home/About">نبذه عنا</a></li>
+                    <li><a class="" href="/Home/Services">خدماتنا</a></li>
+                    <li><a class="" href="/Home/Portfolio">اعمالنا السابقه</a></li>
+                    <li><a class="" href="/Home/TeamMembers">فريق العمل</a></li>
+                    <li class="dropdown">
+                        <a href="#"><span>اقسام</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            @foreach (var item in ViewBag.Services)
+                            {
+                                <li><a href="/Home/service/@item.id">@item.serviceName</a></li>
+                            }
+                        </ul>
+                    </li>
+                    <li><a class="" href="/Home/ContactUs">تواصل معنا!</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+            <a href="/Control_panel/Admin_Panel/Index" class="get-started-btn scrollto">لوحة الادارة</a>
+
+        </div>
+    </header><!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center justify-content-center">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+                <div class="col-xl-6 col-lg-8">
+                    <h1>تصاميم تحول الأفكار إلى واقع<span>!</span></h1>
+                    <h2>فريقنا مكون من مهندسين استشاريين محترفين في كل مجال</h2>
+                </div>
+            </div>
+
+            <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+
+                
+                @foreach (var item in ViewBag.Services)
+                {
+                    <div class="col-xl-2 col-md-4">
+                        <div class="icon-box">
+                            <i class="@item.icon"></i>
+                            <h3><a href="/Home/service/@item.id">@item.serviceName</a></h3>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section><!-- End Hero -->
+
+    @* ================= render body ================= *@
+    @RenderBody()
+    
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                
+                <div class="row">
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-info">
+                            <h4>معلومات التواصل</h4>
+                            
+                            <span>العنوان:</span>
+                            <div style="font-size:smaller; line-height:1.6;" >التجمع الخامس - الحي الخامس ش 18 - منطقة 3 عمارة 42 - شقة 2 الدورالارضي</div>
+                            <br>
+                            <span>ارقام التواصل:</span>
+                            <a href="tel:+01021273499">01144569956</a>
+                                <div class="social-links mt-3">
+                                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>روابط ستساعدك</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/Home/Index">الصفحة الرئيسية</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/Home/About">نبذه عنا</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/Home/Services">خدماتنا</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/Home/Portfolio">اعمالنا السابقه</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/Home/TeamMembers">فريق العمل</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>خدماتنا</h4>
+                        <ul>
+                            @foreach (var item in ViewBag.Services)
+                            {
+                                <li><i class="bx bx-chevron-right"></i> <a href="/Home/service/@item.id">@item.serviceName</a></li>
+                            }
+                            
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-8 footer-links" style="display: flex;">
+                        <img src="~/assets/img/engineer/logo1.png" style="max-width:150px;max-height:150px;margin-top: -21px;"></img>
+                        <div>
+                            <h4>المشرق</h4>
+                            <div style="font-size:small">
+                                مكتب هندسي تأسس عام 2014 وقد غطت اعماله في الكثير من المناطق ودول الخليج
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>El Mashrik</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="~/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="~/assets/vendor/aos/aos.js"></script>
+    <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/assets/vendor/php-email-form/validate.js"></script>
+
+    @* for identity => register and login  *@
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js2/site.js" asp-append-version="true"></script>
+    <!-- Template Main JS File -->
+    <script src="~/assets/js/main.js"></script>
+
+    @* <script>
+
+        let navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach(item => {
+            item.addEventListener("click", function () {
+                console.log("WALED");
+                navLinks.forEach(ele => {
+                    ele.classList.remove("active");
+                });
+                item.classList.add("active");
+            });
+        });
+
+
+     </script> *@
+
+    
+
+</body>
+
+</html>

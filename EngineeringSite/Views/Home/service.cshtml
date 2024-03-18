@@ -1,0 +1,62 @@
+﻿
+@model service
+
+<section id="portfolio-details" class="portfolio-details section">
+    <div class="container">
+
+        <div class="row gy-4">
+
+            <div class="col-lg-4">
+                <div class="portfolio-details-slider swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden" style="max-width: 400px;">
+                    <img src="~/assets/img/services/@Model.photo" alt="">
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="portfolio-description">
+                    <h2>معلومات عن قسم @Model.serviceName:</h2>
+                    <p>
+                        @Model.description
+                        <br>
+                        <br>
+                        <br>
+
+                        @Model.title نحن نعمل بكل تفانٍ واجتهاد في كل قسم، مسعين لتقديم أفضل ما لدينا من خلال الإبداع والتفاني في تقديم الحلول الهندسية المتميزة والمبتكرة لعملائنا
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="portfolio" class="portfolio">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>الاعمال السابقه</h2>
+            <p>تصفح اعمالنا في @Model.serviceName</p>
+        </div>
+
+        <div class="row portfolio-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" style="position: relative; height: 1097.35px;">
+            @foreach (var item in Model.jobsFinisheds)
+            {
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 0px; top: 0px;">
+                <div class="portfolio-wrap">
+                        <img src="~/assets/img/projects/@item.photo[0].FileName" class="img-fluid">
+                    <div class="portfolio-info">
+                            <h4>@item.jobName</h4>
+                            <p>@item.location</p>
+                        <div class="portfolio-links">
+                                <a href="~/assets/img/projects/@item.photo[0].FileName" data-gallery="portfolioGallery" class="portfolio-lightbox" title="تكبير الصورة"><i class="bx bx-plus"></i></a>
+                            <a href="/Home/JobDetails/@item.id" title="تفاصيل أكثر"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+
+    </div>
+</section>

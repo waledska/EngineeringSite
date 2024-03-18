@@ -1,0 +1,73 @@
+﻿@* heading *@
+
+@model TeamMember
+
+<div class="card  col-8" style="margin-bottom: 70px;">
+    <div class="card-body">
+        <h5 class="card-title">تعديل بيانات العضو</h5>
+
+        <!-- General Form Elements -->
+        <form asp-action="UpdateMember" enctype="multipart/form-data">
+            <div class="row mb-3">
+                <label for="projectName" class="col-sm-2 col-form-label">الاسم</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" asp-for="name" required>
+                    <input type="hidden" asp-for="id"/>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="projectName" class="col-sm-2 col-form-label">الوظيفة</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" asp-for="job" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="location" class="col-sm-2 col-form-label">لينك لينكد ان</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" asp-for="linkedinLink">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="location" class="col-sm-2 col-form-label">لينك الفيسبوك</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" asp-for="facebookLink">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="imageUpload" class="col-sm-2 col-form-label">وضع صورة جديدة</label>
+                <div class="col-sm-10">
+                    <input style="margin-bottom: 20px;" class="form-control" type="file" asp-for="formFile" id="fileInput">
+                    <img id="imagePreview" style="max-width: 120px; border: 2px solid #ccc; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);"
+                         src="~/images/@Model.photo"
+                         class="rounded"
+                         alt="...">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-sm-10 offset-sm-2">
+                    <button type="submit" class="btn btn-primary">تعديل البيانات</button>
+                </div>
+            </div>
+        </form>
+        <!-- End General Form Elements -->
+    </div>
+</div>
+
+@* for change the photo in image preview before click save btn *@
+<script>
+    // Add JavaScript to update the image preview
+    document.getElementById("fileInput").addEventListener("change", function () {
+        const fileInput = document.getElementById("fileInput");
+        const imagePreview = document.getElementById("imagePreview");
+
+        const selectedFile = fileInput.files[0];
+        if (selectedFile) {
+            const objectURL = URL.createObjectURL(selectedFile);
+            imagePreview.src = objectURL;
+        }
+    });
+</script>
+
+
+

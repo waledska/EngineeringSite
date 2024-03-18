@@ -1,0 +1,96 @@
+﻿@page
+@model LoginModel
+
+
+<h1>@ViewData["Title"]</h1>
+<div class="container">
+
+    <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+                    <div class="d-flex justify-content-center py-4">
+                        <a href="/Home/Index" class="logo d-flex align-items-center w-auto">
+                            <img src="~/assets/img/engineer/logoIcon.png" alt="">
+                            <span class="d-none d-lg-block">المشرق</span>
+                        </a>
+                    </div>
+                    <!-- End Logo -->
+
+                    <div class="card mb-3">
+
+                        <div class="card-body">
+
+                            <div class="pt-4 pb-2">
+                                <h5 class="card-title text-center pb-0 fs-4">تسجيل الدخول إلى حسابك</h5>
+                                <p class="text-center small">ادخل اسم المستخدم وكلمة المرور لتسجيل الدخول</p>
+                            </div>
+
+                            <form class="row g-3 needs-validation" novalidate="" id="account" method="post">
+
+                                <div class="col-12">
+                                    <label for="yourUsername" class="form-label">اسم المستخدم</label>
+                                    <div class="input-group has-validation">
+                                        <span class="input-group-text" id="inputGroupPrepend">@@</span>
+                                        <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+                                        <div class="invalid-feedback">من فضلك أدخل اسم المستخدم.</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="yourPassword" class="form-label">كلمة المرور</label>
+                                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
+                                    <div class="invalid-feedback">من فضلك أدخل كلمة المرور!</div>
+                                </div>
+
+
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" asp-for="Input.RememberMe" />
+                                        <label class="form-check-label" for="rememberMe">تذكرني</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">تسجيل الدخول</button>
+                                </div>
+                                <div class="col-12">
+                                    <p>
+                                        <a id="forgot-password" asp-page="./ForgotPassword">نسيت كلمة المرور؟</a>
+                                    </p>
+                                    <p>
+                                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">سجل كمستخدم جديد</a>
+                                    </p>
+@*                                     <p>
+                                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">إعادة إرسال تأكيد البريد الإلكتروني</a>
+                                    </p> *@
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="credits">
+                        <!-- جميع الروابط في التذييل يجب أن تبقى سليمة. -->
+                        <!-- يمكنك حذف الروابط فقط إذا قمت بشراء الإصدار الاحترافي. -->
+                        <!-- معلومات الترخيص: https://bootstrapmade.com/license/ -->
+                        <!-- اشترِ الإصدار الاحترافي مع نموذج PHP/AJAX العامل: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+                        Desgined by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+</div>
+
+
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,27 @@
+﻿
+@model List<service>
+
+<section id="services" class="services section">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>الخدمات</h2>
+            <p>تصفح خدماتنا</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+                @foreach (var item in Model)
+                {
+                    <div class="icon-box">
+                        <div class=""><img style="max-width:300px; margin-bottom:30px;" src="~/assets/img/services/@item.photo" class="img-fluid" alt=""></div>
+                        <h4><a href="/Home/service/@item.id">@item.serviceName</a></h4>
+                        <p>@item.title</p>
+                    </div>
+                }
+
+            </div>
+        </div>
+
+    </div>
+</section>

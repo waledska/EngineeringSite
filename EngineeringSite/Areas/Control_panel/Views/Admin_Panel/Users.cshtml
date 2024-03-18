@@ -1,0 +1,70 @@
+﻿@using EngineeringSite.Models;
+@model List<vmUserRole>
+
+<h2>المستخدمين...</h2>
+
+
+<table class="table table-hover">
+    <thead>
+        <tr class="row-cols-3 table-warning">
+            <th class="col-4" scope="col">اسم المستخدم</th>
+            <th class="col-4" scope="col"> الايميل</th>
+            <th class="col-4 " scope="col"><div class="d-flex justify-content-center">الصلاحية</div></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <form asp-action="UpdateUserRole">
+            <tr>
+                <input type="hidden" name="userid" value="@item.user.Id" />
+                <td>@item.user.UserName</td>
+                <td>@item.user.Email</td>
+                <td class="d-flex justify-content-center">
+                    <div class="form-group">
+                        <select class="form-control" id="roleDropdown" style="text-align: center;" name="roleid">
+                            <option value="@item.role.Id">@item.role.Name</option>
+                            @foreach (var role in ViewBag.Roles)
+                            {
+                                if (item.role.Name != role.Name)
+                                {
+                                    <option value="@role.Id">@role.Name</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                    <button class="btn btn-success btn-sm m-1" type="submit" @* onclick="updateUserRole('@item.user.Id')" *@>حفظ</button>
+                </td>
+            </tr>
+            </form>
+        }
+    </tbody>
+</table>
+
+<!-- ... rest of your HTML ... -->
+@* <script>
+    function updateUserRole(userId) {
+        var newRoleId = $("#roleDropdown-" + userId).val();
+
+        // Construct the URL for the UpdateUserRole action
+        var url = "/Control_panel/Admin_Panel/UpdateUserRole";
+
+        // Prepare the data as a query string
+        var data = {
+            UserId: userId,
+            RoleId: newRoleId
+        };
+
+        // Make a POST request to UpdateUserRole
+        $.post(url, data, function (response) {
+            if (response.success) {
+                // Handle success, e.g., show a success message
+                alert("Role updated successfully");
+            } else {
+                // Handle error, e.g., show an error message
+                alert("Failed to update role");
+            }
+        });
+    }
+</script> *@
+
