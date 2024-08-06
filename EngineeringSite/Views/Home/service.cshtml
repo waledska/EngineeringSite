@@ -44,12 +44,15 @@
             {
             <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 0px; top: 0px;">
                 <div class="portfolio-wrap">
-                        <img src="~/assets/img/projects/@item.photo[0].FileName" class="img-fluid">
+                        <img src="~/images/@item.photo[0].FileName" class="img-fluid">
+                        @* <img src="~/assets/img/projects/@item.photo[0].FileName" class="img-fluid"> *@
                     <div class="portfolio-info">
                             <h4>@item.jobName</h4>
                             <p>@item.location</p>
                         <div class="portfolio-links">
-                                <a href="~/assets/img/projects/@item.photo[0].FileName" data-gallery="portfolioGallery" class="portfolio-lightbox" title="تكبير الصورة"><i class="bx bx-plus"></i></a>
+                                @* ~/images/@serv.photo[0].FileName *@
+                                <a href="~/images/@item.photo[0].FileName" data-gallery="portfolioGallery" class="portfolio-lightbox" title="تكبير الصورة"><i class="bx bx-plus"></i></a>
+                                @* <a href="~/assets/img/projects/@item.photo[0].FileName" data-gallery="portfolioGallery" class="portfolio-lightbox" title="تكبير الصورة"><i class="bx bx-plus"></i></a> *@
                             <a href="/Home/JobDetails/@item.id" title="تفاصيل أكثر"><i class="bx bx-link"></i></a>
                         </div>
                     </div>

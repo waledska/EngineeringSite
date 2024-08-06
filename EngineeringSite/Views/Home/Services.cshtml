@@ -14,7 +14,9 @@
                 @foreach (var item in Model)
                 {
                     <div class="icon-box">
-                        <div class=""><img style="max-width:300px; margin-bottom:30px;" src="~/assets/img/services/@item.photo" class="img-fluid" alt=""></div>
+                                                                                        @* ~/images/@serv.photo[0].FileName *@
+                        <div class=""><img style="max-width:300px; margin-bottom:30px;" src="~/images/@item.photo[0]" class="img-fluid" alt=""></div>
+                        @* <div class=""><img style="max-width:300px; margin-bottom:30px;" src="~/assets/img/services/@item.photo" class="img-fluid" alt=""></div> *@
                         <h4><a href="/Home/service/@item.id">@item.serviceName</a></h4>
                         <p>@item.title</p>
                     </div>
