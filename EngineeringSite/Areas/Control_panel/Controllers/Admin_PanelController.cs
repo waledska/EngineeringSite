@@ -21,7 +21,7 @@ namespace EngineeringSite.Areas.Control_panel.Controllers
     {
 
         private readonly ILogger<Admin_PanelController> _logger;
-        private readonly engineeringContext db;
+        private readonly ApplicationDbContext db;
         public result result = new result();
         //private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> RoleManager;
@@ -30,7 +30,7 @@ namespace EngineeringSite.Areas.Control_panel.Controllers
         UserManager<IdentityUser> userManager;
         //private readonly UserManager<ApplicationUser> userManager;
 
-        public Admin_PanelController(ILogger<Admin_PanelController> logger, engineeringContext _context, RoleManager<IdentityRole> roleManager,
+        public Admin_PanelController(ILogger<Admin_PanelController> logger, ApplicationDbContext _context, RoleManager<IdentityRole> roleManager,
             SignInManager<IdentityUser> signInManager, IWebHostEnvironment _host, UserManager<IdentityUser> user  /*, UserManager<ApplicationUser> _userManager*/)
         {
             _logger = logger;

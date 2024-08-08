@@ -9,12 +9,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-var connectionStringEngSite = builder.Configuration.GetConnectionString("engineeringConnection");
+//var connectionStringEngSite = builder.Configuration.GetConnectionString("engineeringConnection");
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
-builder.Services.AddDbContext<engineeringContext>(options =>
-    options.UseSqlServer(connectionStringEngSite));
+//builder.Services.AddDbContext<engineeringContext>(options =>
+    //options.UseSqlServer(connectionStringEngSite));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 ///////////////////////// identity config

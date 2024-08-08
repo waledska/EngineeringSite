@@ -1,4 +1,5 @@
-﻿using EngineeringSite.Models;
+﻿using EngineeringSite.Data;
+using EngineeringSite.Models;
 using EngineeringSite.viewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -10,10 +11,10 @@ namespace EngineeringSite.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly engineeringContext db;
+        private readonly ApplicationDbContext db;
         public result result = new result();
 
-        public HomeController(ILogger<HomeController> logger, engineeringContext _context)
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext _context)
         {
             _logger = logger;
             db = _context;
